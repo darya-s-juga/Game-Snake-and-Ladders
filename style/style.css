@@ -1,0 +1,369 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 1 version
+*/
+
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.3.6,
+* Autoprefixer: v10.3.1
+* Browsers: last 1 version
+*/
+
+
+body{
+  padding: 0;
+  margin: 0 auto;
+}
+
+
+canvas {
+width: 74vmin;
+height: 74vmin;
+margin: 0;
+}
+
+#side{
+position: absolute;
+top: 1vmin;
+left: 75vmin;
+height: 25vmin;
+width: 25vmin;
+background-color: #e64e4d;
+text-align:center;
+font-size: 3.5vmin;
+color: white;
+
+}
+
+#cube_outer {
+height: 8vmin;
+width: 8vmin;
+-webkit-perspective: 30vmin;
+        perspective: 30vmin;
+margin: auto;
+cursor: pointer;
+
+}
+
+#cube_inner {
+height: 100%;
+width: 100%;
+position: absolute;
+-webkit-transform-style: preserve-3d;
+        transform-style: preserve-3d;
+transition: all 0.75s linear;
+}
+
+#cube_inner div {
+height: 100%;
+width: 100%;
+position: absolute;
+}
+
+#front {
+-webkit-transform: translateZ(4vmin);
+        transform: translateZ(4vmin);
+}
+
+#back {
+-webkit-transform: rotateY(180deg) translateZ(4vmin);
+        transform: rotateY(180deg) translateZ(4vmin);
+}
+
+#left {
+-webkit-transform: rotateY(-90deg) translateX(-4vmin);
+        transform: rotateY(-90deg) translateX(-4vmin);
+-webkit-transform-origin: left;
+        transform-origin: left;
+
+}
+
+#right {
+-webkit-transform: rotateY(90deg) translateX(4vmin);
+        transform: rotateY(90deg) translateX(4vmin);
+-webkit-transform-origin: right;
+        transform-origin: right;
+}
+
+#top {
+-webkit-transform: rotateX(-90deg) translateY(-4vmin);
+        transform: rotateX(-90deg) translateY(-4vmin);
+-webkit-transform-origin: top;
+        transform-origin: top;
+}
+
+#bottom {
+-webkit-transform: rotateX(90deg) translateY(4vmin);
+        transform: rotateX(90deg) translateY(4vmin);
+-webkit-transform-origin: bottom;
+        transform-origin: bottom;
+}
+
+img {
+height: 100.3%;
+width: 100.3%;
+}
+
+.box img {
+height: 5vmin;
+
+}
+.gamePlayers {
+position: relative;
+}
+
+.players {
+position: absolute;
+height: 3vmin;
+width: 3vmin;
+border-radius: 50%;
+transition-duration: 0.4s;
+transition-property: margin;
+left: 7.6vmin;
+top: 63vmin;
+} 
+
+.players:nth-child(1){background-color: rgb(206, 186, 223);}
+.players:nth-child(2){background-color:  #35d815;}
+
+a {
+color: black;
+text-decoration: none;
+}
+
+#settings {
+position: absolute;
+top: 27vmin;
+left: 75vmin;
+width: 10vmin;
+background-color: #e64e4d;
+text-align:center;
+ }
+
+.box {
+width: 8vmin;
+position: relative;
+background-color: white;
+margin: 3vmin 1vmin;
+border-radius: 2vmin;
+cursor: pointer;
+}
+.pic_muteOn {
+display: none;
+}
+i {
+font-size: 5vmin;
+list-style: none;
+color: black;
+}
+
+.fa-solid {
+font-family: 'FontAwesome'; 
+color: black;
+cursor: pointer;
+font-size: 5vmin;
+font-style: normal;
+}
+
+.fa-volume-off::before {
+content: '\f2e2';
+}
+
+.fa-cloud-arrow-down::before {
+content: '\f0ed';
+}
+
+.fa-circle-xmark::before {
+content: '\f057';
+}
+
+.fa-question::before {
+content: '\3f';
+}
+
+.page {
+background: url('/img/background-field.jpg') repeat;
+width: 100%;
+z-index: 0;
+
+}
+
+
+#wrapper_game {
+visibility: hidden;
+position: absolute;
+}
+
+
+.wrapper {
+width: 100vmin;
+height: 100vmin;
+position: relative;
+z-index: 1;
+margin: 0 auto;
+
+
+}
+@-webkit-keyframes menuAmimation {
+0% {
+-webkit-transform: translateY(-50vmin) translateX(-67.5vmin);
+        transform: translateY(-50vmin) translateX(-67.5vmin);
+}
+100% {
+-webkit-transform: translateY(0vmin) translateX(-67.5vmin);
+        transform: translateY(0vmin) translateX(-67.5vmin);
+}
+}
+@keyframes menuAmimation {
+0% {
+-webkit-transform: translateY(-50vmin) translateX(-67.5vmin);
+        transform: translateY(-50vmin) translateX(-67.5vmin);
+}
+100% {
+-webkit-transform: translateY(0vmin) translateX(-67.5vmin);
+        transform: translateY(0vmin) translateX(-67.5vmin);
+}
+}
+
+@-webkit-keyframes Pulsing
+{
+0% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5)
+}
+50% {
+-webkit-transform: scale(1.0, 1.0);
+transform: scale(1.0, 1.0);
+}
+100% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5);
+}
+}
+
+@keyframes Pulsing
+{
+0% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5)
+}
+50% {
+-webkit-transform: scale(1.0, 1.0);
+transform: scale(1.0, 1.0);
+}
+100% {
+-webkit-transform: scale(0.5, 0.5);
+transform: scale(0.5, 0.5);
+}
+}
+
+.menu {
+
+position: absolute;
+-webkit-transform: translateX(-50%);
+      transform: translateX(-50%);
+left: 50%;
+width: 97vmin;
+text-align: center;
+opacity: 0.85;
+
+}
+
+.pict {
+display: inline-block;
+width: 27vmin;
+height: 27vmin;
+margin: 3vmin auto;
+z-index: 3;
+transition: -webkit-transform 0.5s;
+transition: transform 0.5s;
+transition: transform 0.5s, -webkit-transform 0.5s;
+-webkit-animation: Pulsing 2s infinite;
+      animation: Pulsing 2s infinite;
+
+}
+
+.rules{
+color: white;
+opacity: 1;
+font-weight: bold;
+font-size: 3vmin;
+}
+
+.field-dom {
+display: block;
+width: 100%;
+}
+
+.header {
+text-transform: uppercase;
+font-size: 10vmin;
+text-align: center;
+margin: 4vmin 0;
+transition: -webkit-transform 0.5s;
+transition: transform 0.5s;
+transition: transform 0.5s, -webkit-transform 0.5s;
+z-index: 3;
+color: aliceblue;
+}
+
+.header:hover {
+-webkit-transform: scale(1.2);
+      transform: scale(1.2);
+
+
+}
+
+.buttons-flex{
+display: flex;
+flex-direction: row;
+justify-content: center;
+}
+
+.button {
+width: 10em;
+height: 2em;
+border-radius: 5px;
+font-size: 3vmin;
+z-index: 3;
+background-color: aliceblue;
+margin: 1em;
+text-align: center;
+line-height: 2em;
+transition: -webkit-transform 0.5s;
+transition: transform 0.5s;
+transition: transform 0.5s, -webkit-transform 0.5s;
+font-weight: bold;
+
+
+}
+.button:hover {
+  border: 1px outset white;
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+cursor: pointer;
+
+}
+
+.button_play {
+float: left;
+color: black;
+}
+
+.button_exit {
+color: black;
+
+}
+
+@media all and (max-width: 465px) {
+canvas {
+width: 72vmin;
+height: 72vmin;
+}
+#side{
+left: 73vmin;
+}
+}

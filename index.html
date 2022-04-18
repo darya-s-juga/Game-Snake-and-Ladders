@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True"/> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./font-awesome-/css/font-awesome.css">
+    
+    <title>Snake and Ladders</title>
+</head>
+<body onresize="resize_canvas()">
+<script src="https://polyfill.io/v3/polyfill.min.js?version=3.111.0&features=Promise%2CinnerHeight%2CinnerWidth%2CrequestAnimationFrame%2Cviewport%2CDOMTokenList.prototype.replace%2CDOMTokenList.prototype.forEach%2CDOMTokenList.prototype.%40%40iterator%2CDOMTokenList%2CDOMRect.fromRect%2CDOMRect"></script>
+
+
+<div class="page">
+    <div class="wrapper" id="main_menu">
+        <div class="menu">
+            <div><img class="pict" src="img/snakes-and-ladders.png" alt="picture of snake and ladder"></div>
+            <div class="header">Snakes and Ladders</div>
+            <div class="rules">(Press S or tab to roll)</div>
+            <div class="buttons-flex">
+                <div class="button button_play" onclick="onGame()"  onClick=""><a href="#wrapper_game" title="Play">Play</a></div>
+                <div class="button button_exit" onclick="closeWindow()"  onClick=""><a href="#">Exit</a></div>
+            </div>
+        </div>
+    
+        <div id="wrapper_game">
+            <div class="gamePlayers">
+                <div class='player1 players'></div>
+                <div class='player2 players'></div>
+            </div>
+            <canvas id="canvas" width="600" height="600"></canvas>
+
+            <div id="side">
+                <p id="p_turn">gray player's turn</p>
+                <div id="cube_outer" class="cube">
+                    <div id="cube_inner">
+                        <div id="front"><img src='./img/1.png' alt="side 1" title="press S to roll"></div>
+                        <div id="back"><img src='./img/2.png' alt="side 2"></div>
+                        <div id="left"><img src='./img/3.png' alt="side 3"></div>
+                        <div id="right"><img src='./img/4.png' alt="side 4"></div>
+                        <div id="top"><img src='./img/5.png' alt="side 5"></div>
+                        <div id="bottom"><img src='./img/6.png' alt="side 6"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="fa-ul" id="settings">
+                <div class='box' id="exit" onclick="closeWindow()"><i class="fa-solid fa-circle-xmark"></i></div>
+                <div class='box' id="muteOff" onclick="switchMute()"><img src="./img/mute_off.png" class="pic_muteOff" alt="mute off"></div>
+                <div class='box' id="muteOn" onclick="switchMute()"><img src="./img/mute_on.png" class="pic_muteOn" alt="mute on"></div>
+            </div> 
+        </div>
+    </div>
+</div>
+<script src="./js/script.js"></script>
+
+    
+</body>
+</html>
